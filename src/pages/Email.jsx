@@ -7,7 +7,7 @@ const Email = () => {
 
     const navigate = useNavigate();
     const handleClick = async()=>{
-        const res = await axios.get(`http://localhost:5000/api/user/getuser/${email}`);
+        const res = await axios.get(`https://movies-media-api.onrender.com/api/user/getuser/${email}`);
         (res.data.isAdmin) ? navigate("/login") : navigate("/failure")
     }
 

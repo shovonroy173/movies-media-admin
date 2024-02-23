@@ -91,7 +91,7 @@ const Upload = () => {
   }, [videoUrl]);
   const navigate = useNavigate();
   const handleClick = async() => {
-    const res = await axios.post("http://localhost:5000/api/movie/post" , inputs);
+    const res = await axios.post("https://movies-media-api.onrender.com/api/movie/post" , inputs);
     console.log(res.data);
     navigate("/success");
   };

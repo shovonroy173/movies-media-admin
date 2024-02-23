@@ -6,7 +6,7 @@ export const login = async(dispatch , user , data)=>{
     dispatch(loginStart());
     console.log(data);
     try {
-        const res = await axios.post("http://localhost:5000/api/auth/login" , user);
+        const res = await axios.post("https://movies-media-api.onrender.com/api/auth/login" , user);
         console.log(res.data);
         dispatch(loginSuccess(res.data));
     } catch (error) {
@@ -18,7 +18,7 @@ export const register = async(dispatch , user)=>{
     dispatch(registerStart());
     console.log(user);
     try {
-        const res = await axios.post("http://localhost:5000/api/auth/register" , user);
+        const res = await axios.post("https://movies-media-api.onrender.com/api/auth/register" , user);
         console.log(res.data);
         dispatch(registerSuccess(res.data));
     } catch (error) {
